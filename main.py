@@ -45,7 +45,7 @@ while 1:
 	if ct == 0:
 		print("*")
 		ct = 100000
-	today = datetime.now().strftime("%x")[3:5]
+	today = datetime.now().strftime("%d")
 
 	hourmin = datetime.now().strftime("%H : %M")
 	
@@ -73,7 +73,7 @@ while 1:
 
 			text += " is inviting you.\n\n"
 
-			text += datetime.now().strftime("%x %H : %M")
+			text += datetime.now().strftime("%H : %M - %d/%m/%y")
 
 
 			chat_ids = []
