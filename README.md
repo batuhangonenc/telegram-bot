@@ -2,5 +2,5 @@
 
 ## Telegram Zoom Class Remainder
 
-codes can route you
+codes can route you,
 just follow the lines...
