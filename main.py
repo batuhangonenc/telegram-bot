@@ -10,7 +10,6 @@ def send_msg(chat_id,text):
 
 	url_req =f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}"
 
-
 	try:
 		results = requests.get(url_req)
 		
@@ -40,8 +39,12 @@ weekly_program = [
 
 ]
 
-
+ct = 0
 while 1:
+	
+	if ct == 0:
+		print("*")
+		ct = 100000
 	today = datetime.now().strftime("%x")[3:5]
 
 	hourmin = datetime.now().strftime("%H : %M")
@@ -85,3 +88,4 @@ while 1:
 			weekly_program.remove(lessonBackup)
 
 			break
+	ct -= 1
