@@ -3,19 +3,17 @@ from datetime import datetime
 import time
 
 
-def send_msg(text):
+def send_msg(chat_id,text):
 	
 	#token of your telegram bot
 	token = ""
-
-	chat_id=""
 
 	url_req =f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}"
 
 
 	try:
 		results = requests.get(url_req)
-		print(results.json())
+		
 	except:
 		print("---\nsomething went wrong.")
 
@@ -75,10 +73,14 @@ while 1:
 			text += datetime.now().strftime("%x %H : %M")
 
 
-		
-			send_msg(text)
+			chat_ids = []
+			
+			counter = 0
+			for cid chat_ids:
+				send_msg(chat_id,text)
+				counter += 1
 
-			print(f"---\nmessage sent successfully :\n{text}")
+			print(f"---\nmessage sent successfully : {counter}\n\n\n{text}")
 
 			weekly_program.remove(lessonBackup)
 
